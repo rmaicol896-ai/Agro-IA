@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: agroia
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/agroia.sqlite
+      - key: AI_PROVIDER
+        value: offline
+      - key: SERVICE_EXPIRES_AT
+        value: "2026-11-30T22:02:21-05:00"

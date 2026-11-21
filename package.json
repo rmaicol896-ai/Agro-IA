@@ -1,0 +1,27 @@
+{
+  "name": "agroia",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0",
+    "npm": ">=10.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev --workspace @agroia/server\" \"npm:dev --workspace @agroia/web\"",
+    "build": "npm run build --workspace @agroia/server && npm run build --workspace @agroia/web",
+    "test": "npm run test --workspace @agroia/server && npm run test --workspace @agroia/web",
+    "lint": "npm run lint --workspace @agroia/server && npm run lint --workspace @agroia/web",
+    "seed": "npm run seed --workspace @agroia/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3"
+  }
+}

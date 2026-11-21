@@ -1,0 +1,11 @@
+{
+  "name": "AgroIA",
+  "short_name": "AgroIA",
+  "description": "Asistente local para cultivos y plantas",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7f2",
+  "theme_color": "#1c5d43",
+  "icons": [{ "src": "/agroia.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
